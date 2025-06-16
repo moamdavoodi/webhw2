@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# برنامه نقاشی با React و TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+این یه برنامه نقاشی باحاله که با React و TypeScript درستش کردیم. توش می‌تونید شکل‌های مختلف بکشید، پاکشون کنید و نقاشی‌تون رو ذخیره کنید که بعداً هم بتونید بیارینش.
 
-## Available Scripts
+## چه کارایی می‌تونه انجام بده؟
 
-In the project directory, you can run:
+### ۱. بخش بالای صفحه
+- می‌تونید اسم نقاشی‌تون رو عوض کنید
+- با دکمه Import می‌تونید نقاشی‌های قبلی‌تون رو باز کنید
+- با دکمه Export می‌تونید نقاشی‌تون رو ذخیره کنید
+- یه دکمه Clear Canvas هم هست که کل صفحه رو پاک می‌کنه
 
-### `npm start`
+### ۲. جعبه ابزار کنار صفحه
+- سه تا شکل داریم: دایره، مربع و مثلث
+- می‌تونید شکل‌ها رو بکشید و بندازید روی صفحه (Drag & Drop)
+- یا روی شکل کلیک کنید و بعد هرجای صفحه که می‌خواید بذاریدش
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ۳. صفحه نقاشی
+- یه صفحه بزرگ که می‌تونید توش نقاشی کنید
+- می‌تونید بالا-پایین و چپ-راست اسکرول کنید
+- خط‌های شطرنجی داره که بهتر بتونید جای شکل‌ها رو ببینید
+- با دوبار کلیک روی هر شکل می‌تونید پاکش کنید
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### ۴. شمارنده پایین صفحه
+- نشون میده چندتا از هر شکل گذاشتید
+- کنار هر عدد، شکلش رو هم می‌بینید
 
-### `npm test`
+## چجوری ساختیمش؟
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### از چه ابزارهایی استفاده کردیم
+- **React**: واسه ساخت صفحه
+- **TypeScript**: که کد تمیزتر و بی‌باگ‌تر بشه
+- **Styled Components**: واسه قشنگ کردن ظاهر برنامه
 
-### `npm run build`
+### چه امکانات باحالی داره
+1. **مدیریت حافظه**: 
+   - همه شکل‌ها و تنظیمات رو یادش می‌مونه
+   - می‌دونه هر شکل کجای صفحه هست
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **کشیدن و رها کردن**: 
+   - می‌تونید شکل‌ها رو از جعبه ابزار بکشید و هرجا خواستید بندازید
+   - خیلی راحت با موس کار می‌کنه
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **ذخیره و بازیابی**:
+   - نقاشی‌تون رو توی یه فایل ذخیره می‌کنه
+   - هر وقت خواستید می‌تونید دوباره بازش کنید
+   - مطمئن میشه فایلی که می‌خواید باز کنید درست باشه
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **ظاهر و کارکرد**:
+   - توی هر سایز صفحه درست کار می‌کنه
+   - پیغام میده که بدونید چه اتفاقی افتاده
+   - قبل کارهای مهم ازتون می‌پرسه که مطمئن باشه
 
-### `npm run eject`
+## چجوری باهاش کار کنیم؟
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **گذاشتن شکل جدید**:
+   - یا شکل رو انتخاب کنید و یه جا کلیک کنید
+   - یا شکل رو بکشید و یه جا ول کنید
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **پاک کردن شکل**:
+   - کافیه روی شکل دوبار کلیک کنید
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. **ذخیره کردن نقاشی**:
+   - دکمه Export رو بزنید
+   - یه جا براش انتخاب کنید و تموم!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. **باز کردن نقاشی قبلی**:
+   - دکمه Import رو بزنید
+   - فایلی که قبلاً ذخیره کردید رو انتخاب کنید
 
-## Learn More
+## چند تا نکته فنی
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- از `useEffect` استفاده کردیم که بفهمیم کجا کلیک کردید
+- شکل‌ها رو با CSS درست کردیم
+- از Styled Components استفاده کردیم که کدها تمیز باشه
+- صفحه نقاشی اسکرول داره که جای بیشتری داشته باشید
+- پیغام‌های قشنگ میده که بدونید چه خبره
